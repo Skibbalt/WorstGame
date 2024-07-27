@@ -10,8 +10,12 @@ public class GachaButton : MonoBehaviour
     [SerializeField]
     private PityManager pityManager;
 
+    [SerializeField]
+    private GameObject gachaRevealUI;
+
     public void OnGachaButtonClick()
     {
+        gachaRevealUI.SetActive(true);
         pityManager.DetermineGacha(isTenPull);
     }
 }

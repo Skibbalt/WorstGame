@@ -9,6 +9,12 @@ public class PityManager : MonoBehaviour
     [SerializeField]
     private TMP_Text pityHistoryText;
 
+    [SerializeField]
+    private Star_Image starImage;
+
+    [HideInInspector]
+    public bool isItAFiveStar;
+
     private float randomNumber; //This value is to determine 0-100% if you get the 3.93% of getting a five star
     private float randomCharacter; //This value is to determine out of the 3.93% of getting a five star, which five star you get based on percentages 
 
@@ -27,24 +33,28 @@ public class PityManager : MonoBehaviour
 
     public void DetermineGacha(bool isItATenPull)
     {
-        if(isItATenPull == false)
+        if(isItATenPull == false) //This is for when the player does a SINGLE pull
         {
             randomNumber = Random.value; //Random.value function generates a random number between 0,1, INCLUDING 0 AND 1
 
             if(randomNumber <= garbageGachaRate)
             {
                 pityCounter++;
+                isItAFiveStar = false;
+                starImage.WhichCharacterRarity(isItAFiveStar);
                 Debug.Log("Your pity is: " + pityCounter); //Just for testing
             }
 
             if(randomNumber > garbageGachaRate || pityCounter >=  99)
             {
                 pityCounter = 0;
+                isItAFiveStar = true;
+                starImage.WhichCharacterRarity(isItAFiveStar);
                 DetermineFiveStar();
             }
         }
 
-        if(isItATenPull == true)
+        if(isItATenPull == true) //This is for when the player does a TEN pull. WORK ON THIS!
         {
             for(int i = 0; i < 10; i++)
             {
@@ -53,12 +63,16 @@ public class PityManager : MonoBehaviour
                 if(randomNumber <= garbageGachaRate)
                 {
                     pityCounter++;
+                    isItAFiveStar = false;
+
                     Debug.Log("Your pity is: " + pityCounter); //Just for testing
                 }
 
                 if(randomNumber > garbageGachaRate || pityCounter >=  99)
                 {
                     pityCounter = 0;
+                    isItAFiveStar = true;
+
                     DetermineFiveStar();
                 }
             }
