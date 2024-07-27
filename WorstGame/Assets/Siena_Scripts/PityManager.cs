@@ -1,9 +1,14 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
+using TMPro;
 
 public class PityManager : MonoBehaviour
 {
+    [SerializeField]
+    private TMP_Text pityHistoryText;
+
     private float randomNumber; //This value is to determine 0-100% if you get the 3.93% of getting a five star
     private float randomCharacter; //This value is to determine out of the 3.93% of getting a five star, which five star you get based on percentages 
 
@@ -14,6 +19,11 @@ public class PityManager : MonoBehaviour
     private float zhongliRate = 0.786f; //Zhongli rate is 0.786%  (20% of 3.93%)
 
     private int pityCounter = 0;
+
+    void Update()
+    {
+        pityHistoryText.text = pityCounter.ToString();
+    }
 
     public void DetermineGacha(bool isItATenPull)
     {
