@@ -24,7 +24,7 @@ public class PityManager : MonoBehaviour
             if(randomNumber <= garbageGachaRate)
             {
                 pityCounter++;
-                Debug.Log("Your pity is: " + pityCounter);
+                Debug.Log("Your pity is: " + pityCounter); //Just for testing
             }
 
             if(randomNumber > garbageGachaRate || pityCounter >=  99)
@@ -43,7 +43,7 @@ public class PityManager : MonoBehaviour
                 if(randomNumber <= garbageGachaRate)
                 {
                     pityCounter++;
-                    Debug.Log("Your pity is: " + pityCounter);
+                    Debug.Log("Your pity is: " + pityCounter); //Just for testing
                 }
 
                 if(randomNumber > garbageGachaRate || pityCounter >=  99)
@@ -61,14 +61,14 @@ public class PityManager : MonoBehaviour
         randomCharacter = Random.Range(minimumCharacterRate, maximumCharacterRate);
 
         if(randomCharacter < aventurineRate) //if "randomCharacter" is SMALLER than "aventurineRate"
-            Debug.Log("You win Aventurine!");
+            Debug.Log("You win Aventurine!"); //Just for testing
 
         if(randomCharacter > aventurineRate) //if "randomCharacter" is BIGGER than "aventurineRate"
         {
             if(randomCharacter <= (aventurineRate + zhongliRate)) //if "randomCharacter" is SMALLER THAN OR EQUAL TO (aventurineRate + zhongliRate)
-                Debug.Log("You win Zhongli!");
+                Debug.Log("You win Zhongli!"); //Just for testing
             else
-                Debug.Log("You win a random person!");
+                Debug.Log("You win a random person!"); //Just for testing
         }
     }
 }
