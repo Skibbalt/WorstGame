@@ -12,16 +12,19 @@ public class GameManager : MonoBehaviour
     [SerializeField]
     private GameObject historyUI;
     [SerializeField]
-    private GameObject gachaRevealUI;
+    private GameObject starRevealUI;
     [SerializeField]
-    private GameObject revealCharacterUI;
+    private GameObject revealSingleCharacterUI;
+    [SerializeField]
+    private GameObject revealTenCharactersUI;
 
     void Awake()
     {
         gachaBannerUI.SetActive(true);
         detailsUI.SetActive(false);
         historyUI.SetActive(false);
-        gachaRevealUI.SetActive(false);
-        revealCharacterUI.SetActive(false);
+        starRevealUI.SetActive(false);
+        revealSingleCharacterUI.SetActive(false);
+        revealTenCharactersUI.SetActive(false);
     }
 }
