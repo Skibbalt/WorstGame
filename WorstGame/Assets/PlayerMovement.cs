@@ -13,21 +13,20 @@ public class PlayerMovement : MonoBehaviour
 
     private float horizontal;
     private bool isFacingRight = true;
-    
+    public static event System.Action OnJump; // Event for when the player jumps
 
     [SerializeField] private float speed = 8f;
     [SerializeField] private float jumpingPower = 16f;
-
 
     void Update()
     {
         rb.velocity = new Vector2(horizontal * speed, rb.velocity.y);
 
-        if(!isFacingRight && horizontal > 0f)
+        if (!isFacingRight && horizontal > 0f)
         {
             Flip();
         }
-        else  if (isFacingRight && horizontal < 0f)
+        else if (isFacingRight && horizontal < 0f)
         {
             Flip();
         }
@@ -37,15 +36,13 @@ public class PlayerMovement : MonoBehaviour
     {
         if (context.performed && IsGrounded())
         {
-            rb.velocity = new Vector2(rb.velocity.x,jumpingPower);
+            rb.velocity = new Vector2(rb.velocity.x, jumpingPower);
+            OnJump?.Invoke(); // Trigger the OnJump event
         }
         if (context.canceled && rb.velocity.y > 0f)
         {
             rb.velocity = new Vector2(rb.velocity.x, rb.velocity.y * 0.5f);
         }
-        
-
-        
     }
 
     private bool IsGrounded()
