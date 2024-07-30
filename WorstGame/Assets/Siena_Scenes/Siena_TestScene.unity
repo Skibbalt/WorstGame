@@ -344,7 +344,11 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+<<<<<<< HEAD:WorstGame/Assets/Scenes/SampleScene.unity
 --- !u!1 &985346108
+=======
+--- !u!1 &1406692700
+>>>>>>> origin/AVENTURINEGACHAREAL:WorstGame/Assets/Siena_Scenes/Siena_TestScene.unity
 GameObject:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -352,20 +356,32 @@ GameObject:
   m_PrefabAsset: {fileID: 0}
   serializedVersion: 6
   m_Component:
+<<<<<<< HEAD:WorstGame/Assets/Scenes/SampleScene.unity
   - component: {fileID: 985346109}
   m_Layer: 0
   m_Name: GroundCheck
+=======
+  - component: {fileID: 1406692701}
+  - component: {fileID: 1406692702}
+  m_Layer: 0
+  m_Name: Testing Object
+>>>>>>> origin/AVENTURINEGACHAREAL:WorstGame/Assets/Siena_Scenes/Siena_TestScene.unity
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
+<<<<<<< HEAD:WorstGame/Assets/Scenes/SampleScene.unity
 --- !u!4 &985346109
+=======
+--- !u!4 &1406692701
+>>>>>>> origin/AVENTURINEGACHAREAL:WorstGame/Assets/Siena_Scenes/Siena_TestScene.unity
 Transform:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
+<<<<<<< HEAD:WorstGame/Assets/Scenes/SampleScene.unity
   m_GameObject: {fileID: 985346108}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
@@ -767,21 +783,32 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1725393016}
+=======
+  m_GameObject: {fileID: 1406692700}
+>>>>>>> origin/AVENTURINEGACHAREAL:WorstGame/Assets/Siena_Scenes/Siena_TestScene.unity
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
+<<<<<<< HEAD:WorstGame/Assets/Scenes/SampleScene.unity
   m_Children:
   - {fileID: 985346109}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &1725393022
+=======
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1406692702
+>>>>>>> origin/AVENTURINEGACHAREAL:WorstGame/Assets/Siena_Scenes/Siena_TestScene.unity
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
+<<<<<<< HEAD:WorstGame/Assets/Scenes/SampleScene.unity
   m_GameObject: {fileID: 1725393016}
   m_Enabled: 1
   m_EditorHideFlags: 0
@@ -795,11 +822,23 @@ MonoBehaviour:
     m_Bits: 8
   speed: 5
   jumpingPower: 8
+=======
+  m_GameObject: {fileID: 1406692700}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f87bd492c2c94b540869e493e0904c6b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+>>>>>>> origin/AVENTURINEGACHAREAL:WorstGame/Assets/Siena_Scenes/Siena_TestScene.unity
 --- !u!1660057539 &9223372036854775807
 SceneRoots:
   m_ObjectHideFlags: 0
   m_Roots:
   - {fileID: 519420032}
+<<<<<<< HEAD:WorstGame/Assets/Scenes/SampleScene.unity
   - {fileID: 1725393021}
   - {fileID: 1028613993}
   - {fileID: 223897292}
+=======
+  - {fileID: 1406692701}
+>>>>>>> origin/AVENTURINEGACHAREAL:WorstGame/Assets/Siena_Scenes/Siena_TestScene.unity
