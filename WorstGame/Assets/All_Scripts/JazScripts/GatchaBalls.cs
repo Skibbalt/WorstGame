@@ -5,13 +5,11 @@ using UnityEngine;
 
 public class GatchaBalls : MonoBehaviour
 {
+    [SerializeField]
+    private PlayerMovement player; //Siena added this
+
     //Keep track of total picked  up
     public static int totalCoins = 0;
-
-    void Awake()
-    {
-        
-    }
 
     void OnTriggerEnter2D(Collider2D c2d)
     {
@@ -20,6 +18,7 @@ public class GatchaBalls : MonoBehaviour
         {
             //Add coin to counter
             totalCoins++;
+            player.totalOrbsCollected++; //Siena added this
            
             Destroy(gameObject);
         }
