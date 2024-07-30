@@ -33,4 +33,13 @@ public class GameManager : MonoBehaviour
         revealSingleCharacterUI.SetActive(false);
         revealTenCharactersUI.SetActive(false);
     }
+
+    void Update()
+    {
+        if (Input.GetKeyDown(KeyCode.Escape))
+            UnityEditor.EditorApplication.isPlaying = false;
+    }
 }
+
+//UnityEditor.EditorApplication.isPlaying = false; //Exit out the player editor in Unity
+//Application.Quit(); //Close the app. This is to be used for when you build a Unity project.
