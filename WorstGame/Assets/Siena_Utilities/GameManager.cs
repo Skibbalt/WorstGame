@@ -6,6 +6,10 @@ public class GameManager : MonoBehaviour
 {
     [Header ("UI Information")]
     [SerializeField]
+    private GameObject startMenu;
+    [SerializeField]
+    private GameObject mainPlatformUI;
+    [SerializeField]
     private GameObject gachaBannerUI;
     [SerializeField]
     private GameObject detailsUI;
@@ -18,9 +22,11 @@ public class GameManager : MonoBehaviour
     [SerializeField]
     private GameObject revealTenCharactersUI;
 
-    void Awake()
+    void Awake() //Only show the Start Menu
     {
-        gachaBannerUI.SetActive(true);
+        startMenu.SetActive(true);
+        mainPlatformUI.SetActive(false);
+        gachaBannerUI.SetActive(false);
         detailsUI.SetActive(false);
         historyUI.SetActive(false);
         starRevealUI.SetActive(false);

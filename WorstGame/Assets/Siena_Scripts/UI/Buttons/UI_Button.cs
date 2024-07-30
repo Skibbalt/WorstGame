@@ -10,8 +10,12 @@ public class UI_Button : MonoBehaviour
     [SerializeField]
     private GameObject uiToSwitchTo;
 
+    [SerializeField]
+    private AudioSource popClickSound;
+
     public void OnPlayerButtonClick()
     {
+        popClickSound.Play();
         currentUI.SetActive(false);
         uiToSwitchTo.SetActive(true);
     }
