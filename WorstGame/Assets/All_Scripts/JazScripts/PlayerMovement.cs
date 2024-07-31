@@ -23,11 +23,55 @@ public class PlayerMovement : MonoBehaviour
 
     [SerializeField] private float speed = 8f;
     [SerializeField] private float jumpingPower = 16f;
+    [SerializeField] private float airControlFactor = 0.5f; // Friction factor for air control
+    [SerializeField] private float groundDeceleration = 10f; // Deceleration when stopping on the ground
+
+    private bool isGrounded;
 
     void Update()
     {
-        rb.velocity = new Vector2(horizontal * speed, rb.velocity.y);
+        isGrounded = IsGrounded();
+        HandleMovement();
+        FlipCharacter();
+    }
 
+    private void HandleMovement()
+    {
+        if (isGrounded)
+        {
+            // Grounded movement
+            rb.velocity = new Vector2(horizontal * speed, rb.velocity.y);
+
+            if (horizontal == 0 && Mathf.Abs(rb.velocity.x) > 0)
+            {
+                // Apply deceleration when stopping
+                rb.velocity = new Vector2(Mathf.MoveTowards(rb.velocity.x, 0, groundDeceleration * Time.deltaTime), rb.velocity.y);
+            }
+        }
+        else
+        {
+            // Air control
+            rb.velocity = new Vector2(horizontal * speed * airControlFactor, rb.velocity.y);
+        }
+    }
+
+    public void Jump(InputAction.CallbackContext context)
+    {
+        if (context.performed && isGrounded)
+        {
+            rb.velocity = new Vector2(rb.velocity.x, jumpingPower);
+            OnJump?.Invoke(); // Trigger the OnJump event
+        }
+        
+    }
+
+    private bool IsGrounded()
+    {
+        return Physics2D.OverlapCircle(groundCheck.position, 0.2f, groundLayer);
+    }
+
+    private void FlipCharacter()
+    {
         if (!isFacingRight && horizontal > 0f)
         {
             Flip();
@@ -36,24 +80,6 @@ public class PlayerMovement : MonoBehaviour
         {
             Flip();
         }
-    }
-
-    public void Jump(InputAction.CallbackContext context)
-    {
-        if (context.performed && IsGrounded())
-        {
-            rb.velocity = new Vector2(rb.velocity.x, jumpingPower);
-            OnJump?.Invoke(); // Trigger the OnJump event
-        }
-        if (context.canceled && rb.velocity.y > 0f)
-        {
-            rb.velocity = new Vector2(rb.velocity.x, rb.velocity.y * 0.5f);
-        }
-    }
-
-    private bool IsGrounded()
-    {
-        return Physics2D.OverlapCircle(groundCheck.position, 0.2f, groundLayer);
     }
 
     private void Flip()
