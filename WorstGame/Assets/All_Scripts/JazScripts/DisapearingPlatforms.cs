@@ -2,15 +2,18 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class DisapearingPlatforms : MonoBehaviour
+public class DisappearingPlatforms : MonoBehaviour
 {
-
     private void OnTriggerEnter2D(Collider2D collision)
     {
-        if (collision.tag == "Player")
+        if (collision.CompareTag("Player"))
         {
-            Destroy(gameObject);
+            Invoke("DestroyPlatform", 2f); // Call DestroyPlatform after 2 seconds
         }
     }
 
+    private void DestroyPlatform()
+    {
+        Destroy(gameObject);
+    }
 }

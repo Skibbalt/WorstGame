@@ -15,7 +15,7 @@ public class GatchaBallsCounter : MonoBehaviour
     void Update()
     {
         // Set the current number of coins to display
-        if (counterText.text != GatchaBalls.totalCoins.ToString())
-            counterText.text = GatchaBalls.totalCoins.ToString();
+        if (counterText.text != GatchaBalls.totalGatcha.ToString())
+            counterText.text = GatchaBalls.totalGatcha.ToString();
     }
 }
