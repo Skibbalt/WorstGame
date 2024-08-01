@@ -40,8 +40,7 @@ public class GameManager : MonoBehaviour
     void Update()
     {
         if (Input.GetKeyDown(KeyCode.Escape))
-            UnityEditor.EditorApplication.isPlaying = false;
-            //Application.Quit(); //Close the app. This is to be used for when you build a Unity project.
+            Application.Quit(); //Close the app. This is to be used for when you build a Unity project.
     }
 }
 
