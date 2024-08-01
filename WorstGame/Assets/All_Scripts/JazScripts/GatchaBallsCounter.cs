@@ -15,6 +15,6 @@ public class GatchaBallsCounter : MonoBehaviour
     void Update()
     {
         // Set the current number of gatcha to display
-        counterText.text = GatchaBalls.totalGatcha.ToString();
+        counterText.text = "X " + GatchaBalls.totalGatcha.ToString();
     }
 }

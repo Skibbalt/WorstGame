@@ -15,6 +15,8 @@ public class Reveal_Single_Character : MonoBehaviour
     private Sprite [] characters = new Sprite [3];
     [SerializeField]
     private GameObject characterRevealUI;
+    [SerializeField]
+    private AudioSource omgAventurineSound;
 
     public void DisplayCharacter(int characterNumber)
     {
@@ -30,6 +32,7 @@ public class Reveal_Single_Character : MonoBehaviour
         {
             imagePlaceholder.sprite = characters[characterNumber]; //Adjusting "imagePlaceholder"'s sprite to a "characters" index at 1
             characterText.text = string.Format("AVENTURINE!");
+            omgAventurineSound.Play();
         }
 
         if(characterNumber == 2)

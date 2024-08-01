@@ -10,6 +10,7 @@ public class AddManager : MonoBehaviour
     [SerializeField] private GameObject[] adPrefabs; // Array of ad prefabs
     [SerializeField] private Transform[] spawnPoints; // Array of spawn points
     [SerializeField] private Canvas uiCanvas; // Reference to the UI canvas
+    [SerializeField] private AudioSource airhornSound;
 
     private void OnEnable()
     {
@@ -31,5 +32,6 @@ public class AddManager : MonoBehaviour
 
         // Instantiate the ad at the spawn point under the UI canvas
         GameObject adInstance = Instantiate(adPrefabs[randomAdIndex], spawnPoints[randomSpawnIndex].position, Quaternion.identity, uiCanvas.transform);
+        airhornSound.Play();
     }
 }

@@ -14,6 +14,7 @@ public class PlayerMovement : MonoBehaviour
     private int jumpCount; // Variable to track the number of jumps
     public static event System.Action OnJump; // Event for when the player jumps
 
+    [HideInInspector]
     public int totalOrbsCollected; // Siena added this because this value has to change when clicking a "gacha button". Don't remove.
     // Siena: I made this because in "GatchaBall" script, the int value is static and isn't flexible to change if we minus or add onto that value from another script.
     // Siena: I made another int that wasn't static in "GatchaBall" script to simply have the same value, but it didn't work as I wanted. They only increase once, then destroy themselves.

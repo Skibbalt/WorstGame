@@ -14,6 +14,10 @@ public class Reveal_Ten_Characters : MonoBehaviour
     private PityManager pityManager; //This is referring to the "PityManager" script
     [SerializeField]
     private GameObject revealTenCharactersUI;
+    [SerializeField]
+    private AudioSource omgAventurineSound;
+
+    private bool playAventurineSound = false;
 
     public void DisplayAllCharacters() 
     //Here, we're grabbing the "trackingCharacterNumbers" array from the "PityManager" script to determine 
@@ -27,10 +31,16 @@ public class Reveal_Ten_Characters : MonoBehaviour
                characterImageSlots[i].sprite =  characters[0];
 
             if(pityManager.trackingCharacterNumbers[i] == 1)
-               characterImageSlots[i].sprite =  characters[1];
+            {
+                playAventurineSound = true;
+                characterImageSlots[i].sprite =  characters[1];
+            }
 
             if(pityManager.trackingCharacterNumbers[i] == 2)
                characterImageSlots[i].sprite =  characters[2];
         }
+
+        if(playAventurineSound == true)
+            omgAventurineSound.Play();
     }
 }

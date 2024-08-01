@@ -21,6 +21,8 @@ public class GameManager : MonoBehaviour
     private GameObject revealSingleCharacterUI;
     [SerializeField]
     private GameObject revealTenCharactersUI;
+    [SerializeField]
+    private GameObject deathUI;
 
     void Awake() //Only show the Start Menu
     {
@@ -32,12 +34,14 @@ public class GameManager : MonoBehaviour
         starRevealUI.SetActive(false);
         revealSingleCharacterUI.SetActive(false);
         revealTenCharactersUI.SetActive(false);
+        deathUI.SetActive(false);
     }
 
     void Update()
     {
         if (Input.GetKeyDown(KeyCode.Escape))
             UnityEditor.EditorApplication.isPlaying = false;
+            //Application.Quit(); //Close the app. This is to be used for when you build a Unity project.
     }
 }
 

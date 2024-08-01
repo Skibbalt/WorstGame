@@ -4,6 +4,9 @@ using UnityEngine;
 
 public class Enemy : MonoBehaviour
 {
+    [SerializeField]
+    private AudioSource bonkSound;
+
     public Transform[] patrolPoints;
     public float patrolSpeed = 2f;
     public float chaseSpeed = 5f;
@@ -108,6 +111,7 @@ public class Enemy : MonoBehaviour
         if (collision.collider.CompareTag("Player"))
         {
             chasingPlayer = true;
+            bonkSound.Play();
             playerMovement.DecreaseGatchaBall(); // Call the method to decrease gatcha ball count
         }
     }

@@ -5,6 +5,8 @@ using UnityEngine;
 public class GatchaBalls : MonoBehaviour
 {
     [SerializeField] private PlayerMovement player; // Reference to PlayerMovement script
+    [SerializeField]
+    private AudioSource yippieSound;
 
     public static int totalGatcha = 0;
 
@@ -12,6 +14,7 @@ public class GatchaBalls : MonoBehaviour
     {
         if (c2d.CompareTag("Player"))
         {
+            yippieSound.Play();
             totalGatcha++;
             player.UpdateTotalOrbsCollected(); // Update the player's total orbs collected
 

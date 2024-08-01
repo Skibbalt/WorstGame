@@ -72,7 +72,7 @@ public class PityManager : MonoBehaviour
                     pityCounter++;
                     trackingCharacterNumbers[i] = 0;
 
-                    if(isItAFiveStar == true)
+                    if(isItAFiveStar == true) //Checking if at any-time during the for-loop if "DetermineFiveStar" method was called, which sets "isItAFiveStar" to true
                         continue;
 
                     else

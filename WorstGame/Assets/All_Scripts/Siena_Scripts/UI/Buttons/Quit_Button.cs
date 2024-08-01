@@ -7,6 +7,7 @@ public class Quit_Button : MonoBehaviour
     public void OnQuitButtonClick()
     {
         UnityEditor.EditorApplication.isPlaying = false;
+        //Application.Quit(); //Close the app. This is to be used for when you build a Unity project.
     }
 }
 
