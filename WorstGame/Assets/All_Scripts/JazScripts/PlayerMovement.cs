@@ -46,6 +46,7 @@ public class PlayerMovement : MonoBehaviour
             if (horizontal == 0 && Mathf.Abs(rb.velocity.x) > 0)
             {
                 rb.velocity = new Vector2(Mathf.MoveTowards(rb.velocity.x, 0, groundDeceleration * Time.deltaTime), rb.velocity.y);
+                transform.localScale = new Vector3(1.5f, 1.5f, 1.5f);
             }
         }
         else
