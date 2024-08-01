@@ -1,7 +1,6 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-using UnityEngine.UI;
 using TMPro;
 
 public class Counting_Gacha_Orbs : MonoBehaviour
@@ -14,8 +13,11 @@ public class Counting_Gacha_Orbs : MonoBehaviour
 
     void Update()
     {
-        //if (gachaOrbInventoryText.text != GatchaBalls.totalCoins.ToString())
-            //gachaOrbInventoryText.text = ("X " + GatchaBalls.totalCoins.ToString());
-        gachaOrbInventoryText.text = ("X " + player.totalOrbsCollected);
+        // Ensure the text reflects the current number of orbs collected
+        string newText = "X " + player.totalOrbsCollected;
+        if (gachaOrbInventoryText.text != newText)
+        {
+            gachaOrbInventoryText.text = newText;
+        }
     }
 }

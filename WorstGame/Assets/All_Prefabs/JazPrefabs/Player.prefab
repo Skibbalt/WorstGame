@@ -205,11 +205,11 @@ MonoBehaviour:
     serializedVersion: 2
     m_Bits: 8
   totalOrbsCollected: 0
-  speed: 8
-  jumpingPower: 16
-  airControlFactor: 0.5
+  speed: 5
+  jumpingPower: 6
+  airControlFactor: 1
   groundDeceleration: 10
-  maxJumpCount: 2
+  maxJumpCount: 1
 --- !u!50 &8575913720289287180
 Rigidbody2D:
   serializedVersion: 4

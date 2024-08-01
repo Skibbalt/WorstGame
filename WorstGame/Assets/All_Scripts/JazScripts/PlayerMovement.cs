@@ -31,7 +31,7 @@ public class PlayerMovement : MonoBehaviour
     void Update()
     {
         isGrounded = IsGrounded();
-        if (isGrounded) jumpCount = 0; // Reset jump count when grounded
+        if (isGrounded) jumpCount = 0;
         HandleMovement();
         FlipCharacter();
     }
@@ -40,18 +40,15 @@ public class PlayerMovement : MonoBehaviour
     {
         if (isGrounded)
         {
-            // Grounded movement
             rb.velocity = new Vector2(horizontal * speed, rb.velocity.y);
 
             if (horizontal == 0 && Mathf.Abs(rb.velocity.x) > 0)
             {
-                // Apply deceleration when stopping
                 rb.velocity = new Vector2(Mathf.MoveTowards(rb.velocity.x, 0, groundDeceleration * Time.deltaTime), rb.velocity.y);
             }
         }
         else
         {
-            // Air control
             rb.velocity = new Vector2(horizontal * speed * airControlFactor, rb.velocity.y);
         }
     }
@@ -61,8 +58,8 @@ public class PlayerMovement : MonoBehaviour
         if (context.performed && jumpCount < maxJumpCount)
         {
             rb.velocity = new Vector2(rb.velocity.x, jumpingPower);
-            jumpCount++; // Increment jump count
-            OnJump?.Invoke(); // Trigger the OnJump event
+            jumpCount++;
+            OnJump?.Invoke();
         }
     }
 
@@ -94,5 +91,20 @@ public class PlayerMovement : MonoBehaviour
     public void Move(InputAction.CallbackContext context)
     {
         horizontal = context.ReadValue<Vector2>().x;
+    }
+
+    public void UpdateTotalOrbsCollected()
+    {
+        // Update the total orbs collected in PlayerMovement based on the static totalGatcha
+        totalOrbsCollected = GatchaBalls.totalGatcha;
+    }
+
+    public void DecreaseGatchaBall()
+    {
+        if (GatchaBalls.totalGatcha > 0)
+        {
+            GatchaBalls.totalGatcha--;
+            totalOrbsCollected = GatchaBalls.totalGatcha; // Update local count
+        }
     }
 }

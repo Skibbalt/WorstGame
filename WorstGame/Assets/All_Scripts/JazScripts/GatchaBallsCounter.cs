@@ -1,7 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-using TMPro; 
+using TMPro;
 
 public class GatchaBallsCounter : MonoBehaviour
 {
@@ -14,8 +14,7 @@ public class GatchaBallsCounter : MonoBehaviour
 
     void Update()
     {
-        // Set the current number of coins to display
-        if (counterText.text != GatchaBalls.totalGatcha.ToString())
-            counterText.text = GatchaBalls.totalGatcha.ToString();
+        // Set the current number of gatcha to display
+        counterText.text = GatchaBalls.totalGatcha.ToString();
     }
 }
