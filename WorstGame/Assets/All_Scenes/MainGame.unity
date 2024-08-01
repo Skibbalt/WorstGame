@@ -4374,7 +4374,7 @@ Transform:
   m_GameObject: {fileID: 819949805}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -2.3214731, y: 0.37218076, z: -10}
+  m_LocalPosition: {x: -3.493227, y: 0.37218076, z: -10}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -6326,7 +6326,7 @@ Transform:
   m_GameObject: {fileID: 1139256880}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -2.3214731, y: 0.37218076, z: -10}
+  m_LocalPosition: {x: -3.493227, y: 0.37218076, z: -10}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -12619,6 +12619,14 @@ PrefabInstance:
       propertyPath: bonkSound
       value: 
       objectReference: {fileID: 1854319403}
+    - target: {fileID: 5065463280880960936, guid: bdef4dfb43befa54ead965da49dfe9b3, type: 3}
+      propertyPath: patrolPoints.Array.data[0]
+      value: 
+      objectReference: {fileID: 500469445}
+    - target: {fileID: 5065463280880960936, guid: bdef4dfb43befa54ead965da49dfe9b3, type: 3}
+      propertyPath: patrolPoints.Array.data[1]
+      value: 
+      objectReference: {fileID: 378436053}
     - target: {fileID: 8743507153409246764, guid: bdef4dfb43befa54ead965da49dfe9b3, type: 3}
       propertyPath: m_Name
       value: BallGrabber (5)
