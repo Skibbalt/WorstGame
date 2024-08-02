@@ -7,9 +7,7 @@ public class DisappearingPlatforms : MonoBehaviour
     private void OnTriggerEnter2D(Collider2D collision)
     {
         if (collision.CompareTag("Player"))
-        {
             Invoke("DestroyPlatform", 2f); // Call DestroyPlatform after 2 seconds
-        }
     }
 
     private void DestroyPlatform()
