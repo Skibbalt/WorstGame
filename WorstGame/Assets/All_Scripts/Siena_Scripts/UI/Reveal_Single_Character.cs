@@ -38,7 +38,7 @@ public class Reveal_Single_Character : MonoBehaviour
         if(characterNumber == 2)
         {
             imagePlaceholder.sprite = characters[characterNumber]; //Adjusting "imagePlaceholder"'s sprite to a "characters" index at 2
-            characterText.text = string.Format("ZHONGLI!");
+            characterText.text = string.Format("SUNDAY!");
         }
     }
 }

@@ -36,13 +36,6 @@ public class Star_Image : MonoBehaviour
             metalPipeSound.Play();
             StartCoroutine("SwitchToCharacterRevealUI", characterNumber);
         }
-
-        if(highRarity == true && characterNumber == 3)
-        {
-            imagePlaceholder.sprite = starSprites[1]; //Adjusting "imagePlaceholder"'s sprite to a "starSprites" index at 1
-            metalPipeSound.Play();
-            StartCoroutine("QuitOnThePlayer");
-        }
     }
 
     public void CheckingCharacterRarities(bool highRarity) //This is for when the player does a TEN pull
@@ -60,14 +53,6 @@ public class Star_Image : MonoBehaviour
             metalPipeSound.Play();
             StartCoroutine("SwitchToTenCharacterRevealUI");
         }
-    }
-
-    IEnumerator QuitOnThePlayer()
-    {
-        float time = 0.5f;
-        yield return new WaitForSeconds(time);
-        StopAllCoroutines();
-        Application.Quit(); //Close the app. This is to be used for when you build a Unity project.
     }
 
     IEnumerator SwitchToCharacterRevealUI(int charNumber)
@@ -92,6 +77,3 @@ public class Star_Image : MonoBehaviour
         yield return null;
     }
 }
-
-//UnityEditor.EditorApplication.isPlaying = false; //Exit out the player editor in Unity
-//Application.Quit(); //Close the app. This is to be used for when you build a Unity project.

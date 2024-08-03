@@ -19,6 +19,9 @@ public class Endgame_Collider : MonoBehaviour
     private void OnTriggerEnter2D(Collider2D collider)
     {
         if (collider.gameObject.CompareTag("Player"))
+        {
             playerRigidBody.constraints = RigidbodyConstraints2D.FreezePositionX | RigidbodyConstraints2D.FreezePositionY;
+            endGameUI.SetActive(true);
+        }
     }
 }

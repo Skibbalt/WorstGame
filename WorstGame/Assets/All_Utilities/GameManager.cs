@@ -8,6 +8,8 @@ public class GameManager : MonoBehaviour
     [SerializeField]
     private GameObject startMenu;
     [SerializeField]
+    private GameObject guideUI;
+    [SerializeField]
     private GameObject mainPlatformUI;
     [SerializeField]
     private GameObject gachaBannerUI;
@@ -35,6 +37,7 @@ public class GameManager : MonoBehaviour
         playerRigidBody = player.GetComponent<Rigidbody2D>();
 
         startMenu.SetActive(true);
+        guideUI.SetActive(false);
         mainPlatformUI.SetActive(false);
         gachaBannerUI.SetActive(false);
         detailsUI.SetActive(false);

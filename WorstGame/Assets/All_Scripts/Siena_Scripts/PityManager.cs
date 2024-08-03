@@ -29,7 +29,7 @@ public class PityManager : MonoBehaviour
     private float minimumCharacterRate = 0.01f;
     private float maximumCharacterRate = 0.0393f; //3.93% of getting a five star out of 100%
     private float aventurineRate = 0.02751f; //Aventurine rate is 2.751% (70% of 3.93%)
-    private float zhongliRate = 0.786f; //Zhongli rate is 0.786%  (20% of 3.93%)
+    //The rate of getting Sunday is (30% of 3.93%), which is 0.786393%
 
     private bool isItATenPull;
 
@@ -107,15 +107,8 @@ public class PityManager : MonoBehaviour
                 //Calling the "WhichCharacterRarity" method in "starImage" while passing "isItAFiveStar" and 1 as parameters into the method
 
             if(randomCharacter > aventurineRate) //if "randomCharacter" is BIGGER than "aventurineRate"
-            {
-                if(randomCharacter <= (aventurineRate + zhongliRate)) //if "randomCharacter" is SMALLER THAN OR EQUAL TO (aventurineRate + zhongliRate)
                     starImage.WhichCharacterRarity(isItAFiveStar, 2);
                     //Calling the "WhichCharacterRarity" method in "starImage" while passing "isItAFiveStar" and 2 as parameters into the method
-                
-                else
-                    starImage.WhichCharacterRarity(isItAFiveStar, 3);
-                    //Calling the "WhichCharacterRarity" method in "starImage" while passing "isItAFiveStar" and 3 as parameters into the method
-            }
         }
 
         if(isItATenPull == true)
@@ -124,14 +117,7 @@ public class PityManager : MonoBehaviour
                 reservedCharacterNumber = 1;
         
             if(randomCharacter > aventurineRate) //if "randomCharacter" is BIGGER than "aventurineRate"
-            {
-                if(randomCharacter <= (aventurineRate + zhongliRate)) //if "randomCharacter" is SMALLER THAN OR EQUAL TO (aventurineRate + zhongliRate)
                     reservedCharacterNumber = 2;
-                    
-                else
-                    starImage.WhichCharacterRarity(isItAFiveStar, 3);
-                    //Calling the "WhichCharacterRarity" method in "starImage" while passing "isItAFiveStar" and 3 as parameters into the method
-            }
         }
     }
 }
