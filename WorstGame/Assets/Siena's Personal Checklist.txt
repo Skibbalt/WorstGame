@@ -1,5 +1,0 @@
-Siena's Personal Checklist
-Add finished game UI
-Add finished game script for end collider
-Find a way to freeze player inputs before game starts and when game ends
-Edit Start Menu

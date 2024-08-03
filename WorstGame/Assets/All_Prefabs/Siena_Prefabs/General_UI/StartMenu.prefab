@@ -18,7 +18,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!224 &5228890263757138958
 RectTransform:
   m_ObjectHideFlags: 0
@@ -252,7 +252,7 @@ GameObject:
   - component: {fileID: 3823246612370765534}
   - component: {fileID: 7501117890678772181}
   - component: {fileID: 6828818734550073013}
-  - component: {fileID: 9137725857782300084}
+  - component: {fileID: 326605754452055243}
   m_Layer: 5
   m_Name: Start Button
   m_TagString: Untagged
@@ -362,8 +362,8 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 9137725857782300084}
-        m_TargetAssemblyTypeName: UI_Button, Assembly-CSharp
+      - m_Target: {fileID: 326605754452055243}
+        m_TargetAssemblyTypeName: Start_Button, Assembly-CSharp
         m_MethodName: OnPlayerButtonClick
         m_Mode: 1
         m_Arguments:
@@ -374,7 +374,7 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
---- !u!114 &9137725857782300084
+--- !u!114 &326605754452055243
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -383,11 +383,12 @@ MonoBehaviour:
   m_GameObject: {fileID: 1162046308410453251}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 4c6239eb82f2f0b4e933a82a6b4d16d4, type: 3}
+  m_Script: {fileID: 11500000, guid: 6ecf0579acd94ef488b2997761a2a987, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   currentUI: {fileID: 186007785563722202}
   uiToSwitchTo: {fileID: 0}
+  player: {fileID: 0}
   popClickSound: {fileID: 0}
 --- !u!1 &2747219792905379201
 GameObject:

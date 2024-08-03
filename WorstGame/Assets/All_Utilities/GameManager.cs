@@ -23,9 +23,17 @@ public class GameManager : MonoBehaviour
     private GameObject revealTenCharactersUI;
     [SerializeField]
     private GameObject deathUI;
+    [SerializeField]
+    private GameObject endGameUI;
+    [SerializeField]
+    private PlayerMovement player;
+
+    private Rigidbody2D playerRigidBody;
 
     void Awake() //Only show the Start Menu
     {
+        playerRigidBody = player.GetComponent<Rigidbody2D>();
+
         startMenu.SetActive(true);
         mainPlatformUI.SetActive(false);
         gachaBannerUI.SetActive(false);
@@ -35,14 +43,19 @@ public class GameManager : MonoBehaviour
         revealSingleCharacterUI.SetActive(false);
         revealTenCharactersUI.SetActive(false);
         deathUI.SetActive(false);
+        endGameUI.SetActive(false);
+
+        StopPlayerMovement();
     }
 
     void Update()
     {
         if (Input.GetKeyDown(KeyCode.Escape))
-            Application.Quit(); //Close the app. This is to be used for when you build a Unity project.
+            Application.Quit(); //Close the app
+    }
+
+    private void StopPlayerMovement() 
+    {
+        playerRigidBody.constraints = RigidbodyConstraints2D.FreezePositionX | RigidbodyConstraints2D.FreezePositionY;
     }
 }
-
-//UnityEditor.EditorApplication.isPlaying = false; //Exit out the player editor in Unity
-//Application.Quit(); //Close the app. This is to be used for when you build a Unity project.
