@@ -18,6 +18,17 @@ public class GameRestart : MonoBehaviour
             //SceneManager.LoadScene(SceneManager.GetActiveScene().name); // Restart the current scene
             metalPipeSound.Play();
             deathUI.SetActive(true);
+
+            GatchaBalls.totalGatcha = 0; // Jazmines A3 change
+            PlayerMovement.totalOrbsCollected = 0; // Jazmines A3 change
+
+            StartCoroutine(RestartScene()); // Jazmines A3 change
         }
+    }
+
+    private IEnumerator RestartScene() // Jazmines A3 change
+    {
+        yield return new WaitForSeconds(2); // Jazmines A3 change
+        SceneManager.LoadScene(SceneManager.GetActiveScene().name); // Jazmines A3 change
     }
 }

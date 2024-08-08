@@ -3699,6 +3699,78 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 7692764698453921937, guid: d803e246ba7da464294aae1de5ffb611, type: 3}
   m_PrefabInstance: {fileID: 539688495}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &632868802
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 632868804}
+  - component: {fileID: 632868803}
+  m_Layer: 0
+  m_Name: GachaSceneListener
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &632868803
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 632868802}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3a199853d3be917448ded7d9ca7e2aa5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Event: {fileID: 11400000, guid: cd5fd9bca2aa2d24c90d90ce67c2fc8e, type: 2}
+  Response:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 2144526876}
+        m_TargetAssemblyTypeName: UnityEngine.InputSystem.PlayerInput, Unity.InputSystem
+        m_MethodName: DeactivateInput
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 8743507153409246764, guid: bdef4dfb43befa54ead965da49dfe9b3, type: 3}
+        m_TargetAssemblyTypeName: UnityEngine.GameObject, UnityEngine
+        m_MethodName: SetActive
+        m_Mode: 6
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+--- !u!4 &632868804
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 632868802}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 3.2371798, y: 0.37616223, z: -9.985954}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &638622472
 GameObject:
   m_ObjectHideFlags: 0
@@ -4374,7 +4446,7 @@ Transform:
   m_GameObject: {fileID: 819949805}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -5.2743998, y: -0.22539014, z: -6}
+  m_LocalPosition: {x: -5.1042004, y: -0.22539014, z: -6}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -6326,7 +6398,7 @@ Transform:
   m_GameObject: {fileID: 1139256880}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -5.2743998, y: -0.22539014, z: -6}
+  m_LocalPosition: {x: -5.1042004, y: -0.22539014, z: -6}
   m_LocalScale: {x: 0.3875, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -7344,6 +7416,66 @@ RectTransform:
   m_AnchoredPosition: {x: 1067.8, y: 167.75}
   m_SizeDelta: {x: 116, y: 100}
   m_Pivot: {x: 2.90339, y: 2.1774848}
+--- !u!1 &1279346995
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1279346997}
+  - component: {fileID: 1279346996}
+  m_Layer: 0
+  m_Name: GameSceneListener
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &1279346996
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1279346995}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3a199853d3be917448ded7d9ca7e2aa5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Event: {fileID: 11400000, guid: ae22a44d1ab5f7a4eb5b00c921eea23a, type: 2}
+  Response:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 2144526876}
+        m_TargetAssemblyTypeName: UnityEngine.InputSystem.PlayerInput, Unity.InputSystem
+        m_MethodName: ActivateInput
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+--- !u!4 &1279346997
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1279346995}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: -10.541681, y: -2.3801072, z: -0.0515466}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1285659000
 GameObject:
   m_ObjectHideFlags: 0
@@ -7462,6 +7594,34 @@ PrefabInstance:
       propertyPath: popClickSound
       value: 
       objectReference: {fileID: 1854319401}
+    - target: {fileID: 1958347697782404434, guid: 8a6e04fa813472e4bac69c64fc09a977, type: 3}
+      propertyPath: GachaEvent.m_PersistentCalls.m_Calls.Array.size
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1958347697782404434, guid: 8a6e04fa813472e4bac69c64fc09a977, type: 3}
+      propertyPath: GachaEvent.m_PersistentCalls.m_Calls.Array.data[0].m_Mode
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1958347697782404434, guid: 8a6e04fa813472e4bac69c64fc09a977, type: 3}
+      propertyPath: GachaEvent.m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 11400000, guid: ae22a44d1ab5f7a4eb5b00c921eea23a, type: 2}
+    - target: {fileID: 1958347697782404434, guid: 8a6e04fa813472e4bac69c64fc09a977, type: 3}
+      propertyPath: GachaEvent.m_PersistentCalls.m_Calls.Array.data[0].m_CallState
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 1958347697782404434, guid: 8a6e04fa813472e4bac69c64fc09a977, type: 3}
+      propertyPath: GachaEvent.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: Raise
+      objectReference: {fileID: 0}
+    - target: {fileID: 1958347697782404434, guid: 8a6e04fa813472e4bac69c64fc09a977, type: 3}
+      propertyPath: GachaEvent.m_PersistentCalls.m_Calls.Array.data[0].m_TargetAssemblyTypeName
+      value: GameEvent, Assembly-CSharp
+      objectReference: {fileID: 0}
+    - target: {fileID: 1958347697782404434, guid: 8a6e04fa813472e4bac69c64fc09a977, type: 3}
+      propertyPath: GachaEvent.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_ObjectArgumentAssemblyTypeName
+      value: UnityEngine.Object, UnityEngine
+      objectReference: {fileID: 0}
     - target: {fileID: 3211920243878678467, guid: 8a6e04fa813472e4bac69c64fc09a977, type: 3}
       propertyPath: m_AnchoredPosition.x
       value: -51.69998
@@ -7806,6 +7966,34 @@ PrefabInstance:
       propertyPath: popClickSound
       value: 
       objectReference: {fileID: 1854319401}
+    - target: {fileID: 4258903874237878502, guid: 35013d01fbf38e8428d44203fba562ba, type: 3}
+      propertyPath: GachaEvent.m_PersistentCalls.m_Calls.Array.size
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4258903874237878502, guid: 35013d01fbf38e8428d44203fba562ba, type: 3}
+      propertyPath: GachaEvent.m_PersistentCalls.m_Calls.Array.data[0].m_Mode
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4258903874237878502, guid: 35013d01fbf38e8428d44203fba562ba, type: 3}
+      propertyPath: GachaEvent.m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 11400000, guid: cd5fd9bca2aa2d24c90d90ce67c2fc8e, type: 2}
+    - target: {fileID: 4258903874237878502, guid: 35013d01fbf38e8428d44203fba562ba, type: 3}
+      propertyPath: GachaEvent.m_PersistentCalls.m_Calls.Array.data[0].m_CallState
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 4258903874237878502, guid: 35013d01fbf38e8428d44203fba562ba, type: 3}
+      propertyPath: GachaEvent.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: Raise
+      objectReference: {fileID: 0}
+    - target: {fileID: 4258903874237878502, guid: 35013d01fbf38e8428d44203fba562ba, type: 3}
+      propertyPath: GachaEvent.m_PersistentCalls.m_Calls.Array.data[0].m_TargetAssemblyTypeName
+      value: GameEvent, Assembly-CSharp
+      objectReference: {fileID: 0}
+    - target: {fileID: 4258903874237878502, guid: 35013d01fbf38e8428d44203fba562ba, type: 3}
+      propertyPath: GachaEvent.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_ObjectArgumentAssemblyTypeName
+      value: UnityEngine.Object, UnityEngine
+      objectReference: {fileID: 0}
     - target: {fileID: 4609591453387839292, guid: 35013d01fbf38e8428d44203fba562ba, type: 3}
       propertyPath: m_Name
       value: MainPlatformUI
@@ -13186,6 +13374,17 @@ Animator:
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorStateOnDisable: 0
   m_WriteDefaultValuesOnDisable: 0
+--- !u!114 &2144526876 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 1660835334093100382, guid: 22becbc2af58f1548aefc07ec0502c65, type: 3}
+  m_PrefabInstance: {fileID: 1978201781}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1546245345}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 62899f850307741f2a39c98a8b639597, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1001 &7277862263035217921
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -13329,3 +13528,5 @@ SceneRoots:
   - {fileID: 161374825}
   - {fileID: 1926809214}
   - {fileID: 2064266366}
+  - {fileID: 632868804}
+  - {fileID: 1279346997}
