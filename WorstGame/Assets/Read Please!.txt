@@ -1,5 +1,0 @@
-This is just a word of caution from Siena. 
-If we're presenting our game in the Unity Editor, ignore this.
-If the game is built without Siena's notice and be put onto the Itch Page, some scripts MAY need to be slightly adjusted.
-It just has to do with quitting the Unity Playing Editor. It would just be replaced with "Application.Quit" instead. 
-The scripts that would need to adjusted would be: Star_Image, GameManager, and Quit_Button

@@ -67,8 +67,7 @@ public class Star_Image : MonoBehaviour
         float time = 0.5f;
         yield return new WaitForSeconds(time);
         StopAllCoroutines();
-        UnityEditor.EditorApplication.isPlaying = false;
-        //Application.Quit(); //Close the app. This is to be used for when you build a Unity project.
+        Application.Quit(); //Close the app. This is to be used for when you build a Unity project.
     }
 
     IEnumerator SwitchToCharacterRevealUI(int charNumber)

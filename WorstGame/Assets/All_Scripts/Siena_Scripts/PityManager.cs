@@ -54,7 +54,7 @@ public class PityManager : MonoBehaviour
                 //Calling the "WhichCharacterRarity" method in "starImage" while passing "isItAFiveStar" and 0 as parameters into the method
             }
 
-            if(randomNumber > garbageGachaRate || pityCounter >=  99) //If the "randomNumber" is BIGGER THAN the "garbageGachaRate" OR "pityCounter" is BIGGER OR EQUAL TO 99
+            if(randomNumber > garbageGachaRate || pityCounter >=  90) //If the "randomNumber" is BIGGER THAN the "garbageGachaRate" OR "pityCounter" is BIGGER OR EQUAL TO 99
             {
                 pityCounter = 0;
                 DetermineFiveStar();
@@ -79,7 +79,7 @@ public class PityManager : MonoBehaviour
                         isItAFiveStar = false;
                 }
 
-                if(randomNumber > garbageGachaRate || pityCounter >=  99) //If the "randomNumber" is BIGGER THAN the "garbageGachaRate" OR "pityCounter" is BIGGER OR EQUAL TO 99
+                if(randomNumber > garbageGachaRate || pityCounter >=  90) //If the "randomNumber" is BIGGER THAN the "garbageGachaRate" OR "pityCounter" is BIGGER OR EQUAL TO 99
                 {
                     pityCounter = 0;
                     DetermineFiveStar();

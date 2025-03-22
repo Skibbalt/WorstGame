@@ -8,7 +8,7 @@ public class MovingPlatform : MonoBehaviour
     public float moveSpeed = 2f; // Speed of the platform's movement
     private Vector3 originalPosition;
     private bool playerOnPlatform = false;
-    private float moveDirection = 1f; // 1 for right, -1 for left
+    //private float moveDirection = 1f; // 1 for right, -1 for left
 
     void Start()
     {
